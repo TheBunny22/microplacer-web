@@ -1,0 +1,17 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24" class="opacity-40 hover:opacity-100"><defs><symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="icon-facebook">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <g id="icon-facebook_页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-facebook_首页" transform="translate(-1520.000000, -3981.000000)" fill="none">
+            <g id="icon-facebook_-mockplus-" transform="translate(1520.000000, 3981.000000)" fill="none">
+                <g id="icon-facebook_face-book" fill="none">
+                    <g fill="none">
+                        <g fill="none">
+                            <circle id="icon-facebook_椭圆形" fill="#313131" cx="12" cy="11.4" r="10.8"></circle>
+                            <path d="M12,0 C5.35384615,0 0,5.35384615 0,12 C0,18.6461539 5.35384615,24 12,24 C18.6461539,24 24,18.6461539 24,12 C24,5.35384615 18.6461539,0 12,0 Z M16.0615385,6.83076923 L14.5846154,6.83076923 C14.2153846,6.73846153 13.7538461,6.92307694 13.4769231,7.2 C13.2923077,7.47692309 13.2,7.84615385 13.2,8.21538462 L13.2,9.96923077 L15.9692308,9.96923077 L15.6,12.7384615 L13.2,12.7384615 L13.2,19.8461539 L10.3384615,19.8461539 L10.3384615,12.7384615 L7.93846153,12.7384615 L7.93846153,9.96923077 L10.3384615,9.96923077 L10.3384615,7.84615385 C10.2461538,6.83076923 10.6153846,5.90769232 11.3538461,5.16923077 C12.0923077,4.52307691 13.0153846,4.15384615 13.9384615,4.24615385 C14.5846154,4.15384615 15.3230769,4.24615385 16.0615385,4.33846153 L16.0615385,6.83076923 Z" id="icon-facebook_形状" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</symbol></defs><use xlink:href="#icon-facebook"></use></svg>

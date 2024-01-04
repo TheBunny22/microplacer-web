@@ -1,0 +1,8 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" class="ml-4"><defs><symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" id="icon-arrow_down">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <g id="icon-arrow_down_组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="icon-arrow_down_open_icon" stroke="#A1A1A1" fill="none">
+            <path d="M3,6 L7.29289322,10.2928932 C7.68341751,10.6834175 8.31658249,10.6834175 8.70710678,10.2928932 L13,6 L13,6" id="icon-arrow_down_路径-2" stroke="#A1A1A1" fill="none"></path>
+        </g>
+    </g>
+</symbol></defs><use xlink:href="#icon-arrow_down"></use></svg>

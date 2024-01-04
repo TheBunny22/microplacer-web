@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "Features": "<div class=\"ColumnText\">Trace to Outline</div>",
+    "Capability": "<div class=\"ColumnText\">0.2mm</div>",
+    "Notes": " <div class=\"ColumnText\">\n        Ships as individual board(Rounting):Trace to Outline≥0.2mm\n      </div>",
+    "Patterns": " <img src=\"../assets/img/clearance/boardOutline1.jpg\"alt=\"legend\" />"
+  },
+  {
+    "id": 2,
+    "Features": "<div class=\"ColumnText\">Trace to V-cut line</div>",
+    "Capability": "<div class=\"ColumnText\">0.4mm</div>",
+    "Notes": "\n      <div class=\"ColumnText\">\n        Ship as panel with V-scoring: Trace to V-cut line≥0.4mm\n      </div>",
+    "Patterns": " <img src=\"../assets/img/clearance/boardOutline2.jpg\"alt=\"legend\" />"
+  }
+]

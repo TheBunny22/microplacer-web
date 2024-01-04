@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>request </title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="request-" fill="#BBBBBB">
+            <rect id="矩形" x="1" y="13" width="10" height="1"></rect>
+            <path d="M5,12 L12.373568,3.70473604 C12.7253329,3.30900052 12.7076617,2.70766171 12.3332654,2.33326542 L10.7499236,0.749923609 C10.3593993,0.359399318 9.72623434,0.359399318 9.33571005,0.749923609 C9.32186017,0.763773486 9.30842019,0.778027282 9.29540751,0.792666552 L2,9 L2,9 L1,13 L5,12 Z" id="路径-8"></path>
+        </g>
+    </g>
+</svg>

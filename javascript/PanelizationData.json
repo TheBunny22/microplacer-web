@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "Features": "<div class=\"ColumnText\">Penelization without space</div>",
+    "Capability": "<div class=\"ColumnText\">0mm</div>",
+    "Notes": "<div class=\"ColumnText\">The space between boards is 0mm.</div>",
+    "Patterns": "<img src=\"../assets/img/clearance/panelization1.jpg\"alt=\"penalization\" />"
+  },
+  {
+    "id": 2,
+    "Features": "<div class=\"ColumnText\">Penelization with space</div>",
+    "Capability": "<div class=\"ColumnText\">2mm</div>",
+    "Notes": "\n      <div class=\"ColumnText\">\n        Make sure the space between boards should be ≥2mm,otherwise it will be\n        hard to process for rounding.\n      </div>",
+    "Patterns": "<img src=\"../assets/img/clearance/panelization2.jpg\"alt=\"penalization\" />"
+  },
+  {
+    "id": 3,
+    "Features": "<div class=\"ColumnText\">Penelized Round Board</div>",
+    "Capability": "<div class=\"ColumnText\">≥20mmx20mm</div>",
+    "Notes": "\n      <div class=\"ColumnText\">\n        The single round board size should be≥20mmx20mm.Panelize with stamp\n        holes and add tooling strips on four board edges\n      </div>",
+    "Patterns": "<img src=\"../assets/img/clearance/panelization3.jpg\"alt=\"penalization\" />"
+  },
+  {
+    "id": 4,
+    "Features": "<div class=\"ColumnText\">Panelized castellated holes board</div>",
+    "Capability": "<div class=\"ColumnText\">\n        Panelize with stamp holes and add tooling strips on four board edges\n      </div>",
+    "Notes": "<ColumnText>\n        The distance between castellated hole and board corner should be larger\n        than 2mm.\n        <br />\n        Recommended diameter of stamp hole is 0.5mm-0.8mm;\n        <br />\n        Recommended distance between the two stamp holes is 0.2-0.3mm\n      </ColumnText>",
+    "Patterns": "<img src=\"../assets/img/clearance/panelization4.png\"alt=\"paele\" />"
+  },
+  {
+    "id": 5,
+    "Features": "<div class=\"ColumnText\">Min. Width of Breakaway Tab</div>",
+    "Capability": "<div class=\"ColumnText\">4mm</div>",
+    "Notes": "<div class=\"ColumnText\">\n        The minimum width of breakaway tab is 4mm. For breakaway with\n        mouse-bites, the minimum width is 5mm.\n      </div>",
+    "Patterns": " <img src=\"../assets/img/clearance/penelization.jpg\"alt=\"paele\" />"
+  },
+  {
+    "id": 6,
+    "Features": "<div class=\"ColumnText\">Min. Edge Rails</div>",
+    "Capability": "<div class=\"ColumnText\">3mm</div>",
+    "Notes": " <div class=\"ColumnText\">\n        If choosing panel by Microplacer, we will add 5mm edge rails on both\n        sides by default.\n      </div>",
+    "Patterns": "<img src=\"../assets/img/clearance/panelization6.jpg\"alt=\"paele\" />"
+  }
+]

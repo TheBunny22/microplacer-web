@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <defs>
+        <circle id="path-1" cx="45" cy="45" r="45"></circle>
+        <circle id="path-3" cx="45" cy="45" r="40"></circle>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-360.000000, -918.000000)">
+            <g id="编组-6备份-11" transform="translate(240.000000, 845.000000)">
+                <g id="-mockplus-" transform="translate(120.000000, 73.000000)">
+                    <g id="编组-7">
+                        <g>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="蒙版" fill="#E3E7ED" xlink:href="#path-1"></use>
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="蒙版备份" fill="#4D5458" xlink:href="#path-3"></use>
+                            <g mask="url(#mask-4)">
+                                <g transform="translate(2.000000, 17.000000)">
+                                    <rect id="矩形" fill="#2F926C" x="0" y="0" width="83" height="60"></rect>
+                                    <rect id="矩形备份-7" fill="#A29E90" x="0" y="5" width="32" height="50"></rect>
+                                    <rect id="矩形备份-9" fill="#E6D391" x="33" y="3" width="19" height="54"></rect>
+                                    <rect id="矩形备份-8" fill="#A29E90" x="53" y="5" width="32" height="50"></rect>
+                                    <rect id="矩形" fill="#E6D391" x="9" y="3" width="25" height="3"></rect>
+                                    <rect id="矩形备份-5" fill="#E6D391" x="32" y="3" width="2" height="54"></rect>
+                                    <rect id="矩形备份-6" fill="#E6D391" x="52" y="3" width="2" height="54"></rect>
+                                    <rect id="矩形备份-2" fill="#E6D391" x="11" y="54" width="23" height="3"></rect>
+                                    <rect id="矩形备份-4" fill="#E6D391" x="52" y="3" width="25" height="3"></rect>
+                                    <rect id="矩形备份-3" fill="#E6D391" x="52" y="54" width="23" height="3"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

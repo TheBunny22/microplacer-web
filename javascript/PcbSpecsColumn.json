@@ -1,0 +1,33 @@
+[
+  {
+    "key": "Features",
+    "label": "<div class=\"TableHeaderText\"> Features </div>",
+    "_props": {
+      "scope": "col",
+      "className": "w-25"
+    }
+  },
+  {
+    "key": "Capability",
+    "label": "<div class=\"TableHeaderText\">Capability</div>",
+    "_props": {
+      "scope": "col",
+      "className": "w-25"
+    }
+  },
+  {
+    "key": "Notes",
+    "label": "<div class=\"TableHeaderText\"> Notes</div>",
+    "_props": {
+      "scope": "col"
+    }
+  },
+  {
+    "key": "Patterns",
+    "label": "<div class=\"TableHeaderText\"> Patterns</div>",
+    "_props": {
+      "scope": "col",
+      "className": "justify-center"
+    }
+  }
+]

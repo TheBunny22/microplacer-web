@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* HeaderwithImage */
+.HeaderwithImage {
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .HeaderwithImage {
+    height: 150px;
+  }
+}
+
+/* HeaderH1 */
+.HeaderH1 {
+  color: #2f385e;
+}
+
+/* Heading2 */
+.Heading2 {
+  color: #252525;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+/* Maxcontainer */
+.Maxcontainer {
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* TabButton */
+.TabButton {
+  border: none;
+  padding: 0 1rem;
+  height: 10vh;
+  min-width: 20vh;
+  font-size: large;
+  font-weight: 700;
+  box-shadow: 0px -6px 0px #f1f3f6;
+}
+
+.TabButton.active {
+  background-color: white;
+  color: #2b8ced;
+}
+
+.TabButton:not(.active) {
+  background-color: #f1f3f6;
+  color: #666;
+}
+
+/* DropdownBt */
+.DropdownBt {
+    width: 100%;
+    border: none;
+    display: flex;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+    color: #222;
+}
+
+/* OnlickRotateImg */
+.OnlickRotateImg {
+  /* No CSS as the rotation occurs dynamically in the component */
+}
+
+/* ColumnCenter */
+.ColumnCenter {
+  display: flex;
+  align-items: center;
+}
+
+/* ColumnText */
+.ColumnText {
+  color: #666666;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: small;
+  text-align: left;
+}
+
+/* TableHeaderText */
+.TableHeaderText {
+  font-size: large;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+/* ShadowBox */
+.ShadowBox {
+  padding: 3rem;
+  box-shadow: 0 4px 20px 2px rgba(198, 206, 221, 0.3);
+}
+
+/* RoundedButton */
+.RoundedButton {
+  min-width: 25rem;
+  font-size: medium;
+  padding: 1rem;
+  border-radius: 4rem;
+  margin: 0 2rem;
+  font-weight: 700;
+}
+
+.RoundedButton[varient="outline"] {
+  background: white;
+  border: 1px solid #2b8ced;
+  color: #2b8ced;
+}
+
+.RoundedButton:not([varient="outline"]) {
+  background: #2b8ced;
+  border: 1px solid #2b8ced;
+  color: white;
+}
+table{
+    width: 100%;
+    
+    border: 1px solid #ccc;
+}
+th{
+   background: #ccc;
+}

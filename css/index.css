@@ -1,0 +1,641 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    Arial, sans-serif;
+  font-size: 12px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Hide the default scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* //carousal÷ */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 46rem;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+.slideimg {
+  height: 46rem;
+  object-fit: cover;
+}
+.active {
+  opacity: 1;
+}
+
+.cbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev {
+  left: 2rem;
+  background: transparent;
+  border: none;
+  scale: 2;
+}
+
+.next {
+  right: 2rem;
+  background: transparent;
+  border: none;
+  scale: 2;
+}
+
+/* instanst qoute style  */
+.InstantQuote {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 10rem;
+  gap: 1rem;
+  z-index: 5;
+  border-radius: 1rem;
+  position: relative;
+  background: white;
+  max-width: 1250px;
+  margin: auto;
+  bottom: 5rem;
+  box-shadow: 0px 0px 2px 0px grey;
+}
+
+.UploadWrapper {
+  /* Styles for the file upload wrapper */
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+}
+
+.FileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.UploadBox {
+  border: 2px dashed gray;
+  height: 100%;
+  display: flex;
+  background: #f7fbff;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20rem;
+  text-align: center;
+  border-radius: 1rem;
+  /* Styles for the upload box */
+}
+.FileIcon {
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+.InputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.Label {
+  font-size: 14px;
+  text-align: left;
+}
+
+.RadioWrapper {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+
+.DimensionContainer {
+  border: 1px solid #eee;
+  width: 12rem;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DimensionInput {
+  width: 5rem;
+  border: none;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.DimensionSeparator {
+  margin: 0 0.5rem;
+}
+.DeafualtRadioBt {
+  display: flex;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  cursor: pointer;
+  padding: 0.3rem 2rem;
+  text-align: center;
+}
+.Inputradio {
+  position: absolute;
+  padding: 0.5rem 2rem;
+  opacity: 0;
+  background: #ffffff;
+  border: none;
+}
+/* CSS equivalent of MediumBlueButton styled component */
+
+.dropdownNum {
+  background: white;
+  border: 1px solid rgb(238, 238, 238);
+  color: black;
+  padding: 1rem;
+  width: 5rem;
+}
+
+.MediumBlueButton {
+  padding: 0.8rem; /* Default padding */
+  font-size: 18px; /* Default font size */
+  background-color: #2b8ced; /* Default background color */
+  border: none; /* Default border */
+  color: white; /* Default text color */
+  width: 15rem; /* Default width */
+  border-radius: 5rem;
+  font-weight: 500;
+}
+
+.MediumBlueButton.variant-outline {
+  background-color: transparent;
+  border: 1px solid #2b8ced;
+  color: #2b8ced;
+}
+
+/* Define other sections' styles as per their respective class names */
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.news-wrapper {
+  margin: 1rem;
+  display: flex;
+
+  align-items: center;
+  max-height: 2rem;
+}
+
+@media (max-width: 767px) {
+  .news-wrapper {
+    flex-direction: column;
+    max-height: 5rem;
+  }
+}
+
+.news-label {
+  background: #fef2dd;
+  color: #ffac1f;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .news-label {
+    font-size: 10px;
+  }
+}
+
+.news-items {
+  max-height: 2rem;
+  overflow: hidden;
+}
+
+.news-item {
+  display: block;
+  color: red;
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+.timestamp {
+  color: grey;
+  margin: 0px 10px;
+  font-size: 14px;
+}
+
+.news-text {
+  color: red;
+}
+/* cards */
+.Cards {
+  margin: auto;
+  max-width: 1250px;
+  padding-bottom: 1rem;
+}
+
+.CardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .CardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.CardWrapper {
+  width: 24rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .CardWrapper {
+    width: 80%;
+  }
+}
+
+.CardTitle {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.CardContent {
+  text-align: center;
+}
+
+.CardImage {
+  height: 15vh;
+  margin: 1rem;
+}
+
+.PriceText {
+  color: grey;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.PriceValue {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2b8ced;
+}
+
+.FeaturesList {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.FeatureItem {
+  display: flex;
+  align-items: start;
+  text-align: left;
+  gap: 0.5rem;
+  justify-content: start;
+  padding: 0.5rem;
+  word-break: keep-all;
+  max-width: 25rem;
+}
+
+.ButtonQoute {
+  justify-self: center;
+  border: none;
+  padding: 1rem;
+  font-size: medium;
+  border-radius: 30px;
+  background: #2b8ced;
+  color: white;
+}
+
+/* video player css */
+
+.VContainer {
+  height: 800px;
+  background: #f8f9fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.VideoContainer {
+  position: relative;
+  text-align: center;
+}
+
+.Heading {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Subtitle {
+  opacity: 50%;
+  font-size: medium;
+  padding: 0.5rem;
+}
+
+.BackgroundImage {
+  /* Add styles for the background image */
+}
+
+.Video {
+  height: 500px;
+}
+
+.ButtonContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-40%, 0%);
+  text-align: center;
+}
+
+.ReplayButton {
+  text-align: center;
+  color: white;
+  border-radius: 10rem;
+  min-width: 10rem;
+  font-size: 18px;
+  border: 2px solid white;
+  background: transparent;
+  height: 4rem;
+  /* Other styles */
+}
+
+.QuoteButton {
+  text-align: center;
+  margin: 0rem 5rem;
+  border-radius: 10rem;
+  min-width: 10rem;
+  font-size: 18px;
+  border: none;
+  padding: 0 2rem;
+  color: white;
+  background: #2b8ced;
+  height: 4rem;
+  /* Other styles */
+}
+
+.ReplayImage {
+  filter: invert(100%);
+  transform: scaleX(-1);
+  margin: 0 10px;
+  font-weight: bold;
+  height: 20px;
+  /* Other styles */
+}
+/* home discription section */
+.homedis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1250px;
+  margin: auto;
+  text-align: center;
+  height: 600px;
+}
+.DisContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* display: flex; */
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .Container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+.CardContainer {
+  margin: 1rem 0;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.Logo {
+  margin-right: 1rem;
+}
+
+.Logo img {
+  height: 100%;
+}
+
+.DTitle {
+  font-weight: 700;
+  font-size: medium;
+  margin-left: 1rem;
+}
+
+.Text {
+  font-size: medium;
+  color: grey;
+  margin: 1rem 0rem;
+  max-width: 45rem;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.LinkText {
+  color: #2b8ced;
+  font-size: medium;
+}
+
+.YoutubeVideo {
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+}
+/* allies caraousal */
+.LogocarousalContainer {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.LogosWrapper {
+  display: flex;
+  animation: slideLeft 30s linear infinite;
+  /* Include other necessary styling */
+}
+
+.LogoImage {
+  margin: 0 2rem;
+  width: 120px;
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+.AlliesContainer {
+  background: #edf5fe;
+}
+
+.AContentContainer {
+  max-width: 1250px;
+  height: 400px;
+  margin: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+}
+
+.AContentContainer {
+  height: 50%;
+}
+
+.AHeading {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .AHeading {
+    font-size: 24px;
+  }
+}
+
+.AFlexContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+@media (max-width: 767px) {
+  .AFlexContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.AReplayButton {
+  text-align: center;
+  color: #2b8ced;
+  border-radius: 10rem;
+  min-width: 20rem;
+  font-size: 18px;
+  border: 2px solid #2b8ced;
+  background: transparent;
+  height: 4rem;
+}
+
+.AQuoteButton {
+  text-align: center;
+  border-radius: 10rem;
+  min-width: 20rem;
+  font-size: 18px;
+  border: none;
+  padding: 0 2rem;
+  color: white;
+  background: #2b8ced;
+  height: 4rem;
+}
+footer {
+  background: #353535;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* Style for .company-container, .support-container, .network-site-container, .connect-container */
+/* Use similar styling as in the styled-components for these containers */
+
+.company-container h3,
+.support-container h3,
+.connect-container h3,
+.network-site-container h3 {
+  font-size: x-large;
+  color: white;
+}
+
+.footer-items {
+  color: #9e9e9e;
+  font-size: medium;
+  margin: 1rem 0;
+}
+
+.social-media {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  margin: 0px 5px;
+}
+.connect-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  grid: 0.1rem;
+  gap: 1rem;
+}
