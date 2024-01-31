@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Order | Microplacer</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/Navbar.css" />
+    <link rel="stylesheet" href="css/order.css" />
+    <link rel="stylesheet" href="css/capability.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="popup" id="errorPopup">
+      <div class="popup-content">
+        <span class="close" id="pop-close-bt">&times;</span>
+        <p>Error: Please upload a valid file!</p>
+      </div>
+    </div>
+    <header>
+      <!-- Top Navigation -->
+      <section class="TopNav">
+        <div class="TopNavC">
+          <!-- Left Section -->
+          <div class="LeftSection">
+            <svg
+              class="Icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="20px"
+              fill="currentColor"
+              class="bi bi-clock"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+              />
+              <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+              />
+            </svg>
+            <div class="NText">Mon - Sat: 10:30AM - 06:00PM</div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="RightSection">
+            <svg
+              class="Icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="20px"
+              fill="currentColor"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
+            </svg>
+            <div class="PhoneNumber">+91 88661 88126 | +91 95120 12125</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Maximum Container -->
+      <section class="Maxcontainer">
+        <!-- Brand Navbar -->
+        <nav class="BNavbar">
+          <!-- Logo Cover -->
+          <div class="LogoCover">
+            <a href="index.html">
+              <img class="Navlogo" src="assets/img/logoSlogan.png" alt="Logo" />
+            </a>
+            <!-- Hamburger -->
+            <div class="Hamburger">
+              <span class="OpenIcon" style="font-size: 3rem">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+              </span>
+              <span class="CloseIcon" style="font-size: 3rem">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <!-- Or maybe an image/icon here -->
+
+          <!-- Mobile Navbar -->
+          <div class="MNavbar">
+            <a href="index.html" class="textStyle">
+              <div class="NavItems">Home</div>
+            </a>
+            <a href="capability.html" class="textStyle">
+              <div class="NavItems">Capability</div>
+            </a>
+            <a href="order.html" class="textStyle">
+              <div class="NavItems Nactive">Order Now</div>
+            </a>
+
+            <!-- Other links and elements here -->
+          </div>
+        </nav>
+      </section>
+    </header>
+    <main id="maincvr">
+      <div class="maxContainer">
+        <div class="order-form-wrapper">
+          <section class="fileCover">
+            <button class="RoundedButton" id="file-bt">Add gerber file</button>
+            <input
+              type="file"
+              style="display: none"
+              name="gerberFile"
+              id="gerberFile"
+            />
+            <p id="file-res">
+              Only accept zip , Max 25 MB, All uploads are secure and
+              confidential.
+            </p>
+          </section>
+
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Base Material</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                FR-4 is the most popular substrate material for rigid PCBs.
+                <br />
+                <br />
+                Flex PCBs utilize a thin, flexible polymer film as the substrate
+                for the circuitry. Flex PCBs reduce space consumption, and have
+                lower weight.
+                <br />
+                <br />
+                Aluminum/copper core boards have better heat dissipation and
+                thermal transfer than standard FR-4 constructions.
+                <br />
+                <br />
+                Note: For Aluminum/Copper core boards, the min drill size is
+                1.0mm, and min slot width is 1.6mm.</span
+              >
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio" id="bm-fr">
+                <label
+                  ><img src="assets/img/fr.png" alt="FR-4" height="25" />
+                  FR</label
+                >
+              </div>
+              <div class="defualt-radio" id="bm-flex">
+                <label
+                  ><img src="assets/img/fpc.png" alt="" height="25" />
+                  Flex</label
+                >
+                <button class="input-radio" id="FR"></button>
+              </div>
+              <div class="defualt-radio" id="bm-alu">
+                <label
+                  ><img src="assets/img/alu.png" alt="FR-4" height="25" />
+                  ALU</label
+                >
+                <button class="input-radio" id="FR"></button>
+              </div>
+              <div class="defualt-radio" id="bm-cc">
+                <label>
+                  <img src="assets/img/copper.png" alt="FR-4" height="20" />
+                  Copper Core</label
+                >
+                <button class="input-radio" id="FR"></button>
+              </div>
+
+              <div class="defualt-radio" id="bm-rog">
+                <label
+                  ><img src="assets/img/rogers.png" alt="FR-4" height="20" />
+                  Roggers</label
+                >
+                <button class="input-radio" id="FR"></button>
+              </div>
+              <div class="defualt-radio" id="bm-ptfe">
+                <label
+                  ><img src="assets/img/fei.png" alt="FR-4" height="20" /> PTFE
+                  Teflon</label
+                >
+                <button class="input-radio" id="FR"></button>
+              </div>
+            </div>
+          </section>
+
+          <!-- layers -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Layer</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                The number of copper layer on the board.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio" id="ly-1">
+                <label> 1</label>
+              </div>
+              <div class="defualt-radio" id="ly-2">
+                <label> 2</label>
+              </div>
+              <div class="defualt-radio" id="ly-4">
+                <label> 4</label>
+              </div>
+              <div class="defualt-radio" id="ly-6">
+                <label> 6</label>
+              </div>
+              <div class="defualt-radio" id="ly-8">
+                <label> 8</label>
+              </div>
+              <div class="defualt-radio" id="ly-10">
+                <label> 10</label>
+              </div>
+              <div class="defualt-radio" id="ly-12">
+                <label> 12</label>
+              </div>
+            </div>
+          </section>
+          <!-- dimension -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Dimensions</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                <div style="display: flex; flex-direction: column">
+                  The dimension of single PCB or PCB panel you upload.
+                  <img src="assets/img/maxd.jpg" alt="dimension" width="150" />
+                </div>
+              </span>
+            </span>
+            <div class="radio-wrapper">
+              <div class="DimensionContainer">
+                <input
+                  type="number"
+                  class="DimensionInput"
+                  id="dimensionX"
+                  max="300"
+                  min="20"
+                  value="20"
+                />
+                <div class="DimensionSeparator">X</div>
+                <input
+                  type="number"
+                  class="DimensionInput"
+                  id="dimensionY"
+                  max="300"
+                  min="20"
+                  value="20"
+                />
+              </div>
+              mm
+            </div>
+          </section>
+          <!-- dimension ends  -->
+          <!-- quantity -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input" id="qt-label">PCB Quantity</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                The quantity of boards you require
+              </span>
+            </span>
+            <div class="radio-wrapper">
+              <button id="qt-indicator" class="qt-bt">5</button>
+              <div id="qt-pop"></div>
+            </div>
+          </section>
+          <!-- pcb spec-->
+          <button id="pcb-Specifications-bt" class="DropdownBt">
+            PCB Specifications
+            <img
+              class="OnlickRotateImg"
+              src="assets/svg/DownArrow.svg"
+              id="pcb-Specifications-img"
+            />
+          </button>
+          <!-- col and rows of panel  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Delivery Format</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                How many different designs in your files separated by v-cuts,
+                stamp holes or milling slots
+              </span>
+            </span>
+            <div class="radio-wrapper">
+              <div class="active-radio" id="df-single">
+                <label>Single PCB</label>
+              </div>
+              <div class="defualt-radio" id="df-cust">
+                <label>Panel By Customer</label>
+              </div>
+              <div class="defualt-radio" id="df-micro">
+                <label>Panel By Microplacer</label>
+              </div>
+            </div>
+          </section>
+          <!-- delivery format -->
+          <section class="order-param-wrapper" id="pf-in">
+            <div class="label-of-input"><!--Panel Format--></div>
+            <span class="tooltip">
+              <!-- <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                How many different designs in your files separated by v-cuts, stamp holes or milling slots  
+              </span> -->
+            </span>
+            <div class="radio-wrapper">
+              <div class="panel-dis">
+                Column :
+                <div class="colrow-con">
+                  <input type="number" id="pf-col" class="col-row" />mm
+                </div>
+              </div>
+              <div class="panel-dis">
+                Row :
+                <div class="colrow-con">
+                  <input type="number" id="pf-row" class="col-row" />mm
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- thickness -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Thickness</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                The thickness of finished board. Board thickness tolerance is
+                +/-10%.
+                <img
+                  src="assets/img/pcbthickness.jpg"
+                  alt="pcb thickness details"
+                />
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="default" id="th-04">
+                <label> 0.4</label>
+              </div>
+              <div class="defualt-radio" id="th-06">
+                <label>0.6</label>
+              </div>
+              <div class="defualt-radio" id="th-08">
+                <label>0.8</label>
+              </div>
+              <div class="defualt-radio" id="th-10">
+                <label> 1.0</label>
+              </div>
+              <div class="defualt-radio" id="th-12">
+                <label> 1.2</label>
+              </div>
+              <div class="active-radio" id="th-16">
+                <label> 1.6</label>
+              </div>
+              <div class="defualt-radio" id="th-20">
+                <label> 2.0</label>
+              </div>
+            </div>
+          </section>
+
+          <!-- pcb color -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">PCB Color</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                The PCB solder mask color. The green standard has the best
+                performance and fastest turnaround time.
+                <br />
+                <br />
+                For most colors, the silkscreen is printed white.
+                <br />
+                <br />
+                Only for white solder mask, the silkscreen is printed black.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio" id="clr-green">
+                <label> <span class="color-cir" id="green"></span>Green </label>
+              </div>
+              <div class="defualt-radio" id="clr-purple">
+                <label
+                  ><span class="color-cir" id="purple"></span>Purple
+                </label>
+              </div>
+              <div class="defualt-radio" id="clr-red">
+                <label><span class="color-cir" id="red"></span>Red </label>
+              </div>
+              <div class="defualt-radio" id="clr-yellow">
+                <label
+                  ><span class="color-cir" id="yellow"></span> Yellow
+                </label>
+              </div>
+              <div class="defualt-radio" id="clr-blue">
+                <label> <span class="color-cir" id="blue"></span> Blue</label>
+              </div>
+              <div class="defualt-radio" id="clr-white">
+                <label><span class="color-cir" id="white"></span> White </label>
+              </div>
+              <div class="defualt-radio" id="clr-black">
+                <label><span class="color-cir" id="black"></span>Black </label>
+              </div>
+            </div>
+          </section>
+          <!-- Surface Finish -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Surface Finish</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                HASL is an affordable finishing option that utilizes tin/lead to
+                creating a thin protective covering on a PCB.
+                <br />
+                <br />
+
+                ENIG has become the most popular surface finish in the industry
+                as it offers flat surface, lead free and RoHS compliant, longer
+                shelf life, and tighter tolerances can be held for plated holes.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio" id="sf-h">
+                <label>HASL (with Lead)</label>
+              </div>
+              <div class="defualt-radio" id="sf-l">
+                <label>Lead Free HASL</label>
+              </div>
+              <div class="defualt-radio" id="sf-e">
+                <label>ENIG</label>
+              </div>
+            </div>
+          </section>
+          <!-- Silk screen -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Silk Screen</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                For most colors, the silkscreen is printed white. Only for white
+                solder mask, the silkscreen is printed black.
+                <br />
+                <br />
+                Please note, white printed silkscreen could be easily blend in
+                with the gray surface.No silkscreen is recommended on the bare
+                Aluminum surface.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio">
+                <label id="silk-text"
+                  ><span class="color-cir" id="silkscreen"></span> White
+                </label>
+              </div>
+            </div>
+          </section>
+          <!-- pcb spec-->
+          <button id="pcb-Specifications-bt" class="DropdownBt">
+            High PCB Spec
+            <img
+              class="OnlickRotateImg"
+              src="assets/svg/DownArrow.svg"
+              id="pcb-Specifications-img"
+            />
+          </button>
+          <!-- Outer copper  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">
+              Outer Copper <br />
+              Weight
+            </div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                Copper weight on the outer layers(top and bottom).
+                <br />
+                The copper weight for inner layers is 0.5 oz by default.
+                <img
+                  src="assets/img/outlyr.jpg"
+                  alt="outer copper oz"
+                  width="150"
+                />
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio" id="oc-1">
+                <label>1 oz</label>
+              </div>
+              <div class="defualt-radio" id="oc-2">
+                <label>2 oz</label>
+              </div>
+            </div>
+          </section>
+          <!-- outer copper ends -->
+          <!-- via coveringr  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Via Covering s</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                Vias are covered with soldermask and are not processed with HASL
+                or ENIG. Boards with 6+ layers are upgraded to Epoxy Filled &
+                Capped Via for free.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio">
+                <label>Tented</label>
+              </div>
+            </div>
+          </section>
+          <!-- flying probe test  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Flying Probe Test</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                We electrically test PCBs by using a flying probe tester to
+                ensure there are no open circuits or no short circuits.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio">
+                <label>Yes</label>
+              </div>
+            </div>
+          </section>
+          <!-- Gold finger  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Gold Finger</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                Gold fingers are the gold-plated columns along the connecting
+                edges of PCBs.
+                <br />
+                <br />
+                Only when ENIG surface finish is chosen, the fingers will be
+                gold-plated.
+                <br />
+                <br />
+                If you choose HASL surface finish, we will use HASL as edge
+                connect plating.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="defualt-radio" id="gf-yes">
+                <label>Yes</label>
+              </div>
+              <div class="active-radio" id="gf-no">
+                <label>No</label>
+              </div>
+            </div>
+          </section>
+          <!-- Castellated Holes  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Castellated Holes</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                Castellations are plated through holes located in the edges of a
+                printed circuit board and cut through to form a series of half
+                holes.
+                <br />
+                <br />
+                The minimum diameter of castellated holes is 0.60mm.
+              </span>
+            </span>
+            <div class="radio-wrapper">
+              <div class="defualt-radio" id="ch-yes">
+                <label>Yes</label>
+              </div>
+              <div class="active-radio" id="ch-no">
+                <label>No</label>
+              </div>
+            </div>
+          </section>
+          <!-- pcb spec-->
+          <button id="pcb-Specifications-bt" class="DropdownBt">
+            Advanced Spec-Option
+            <img
+              class="OnlickRotateImg"
+              src="assets/svg/DownArrow.svg"
+              id="pcb-Specifications-img"
+            />
+          </button>
+          <!-- Appearance  -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">Appearance</div>
+            <span class="tooltip">
+              <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                According to the IPC Class 2 standard, less than two 0.09㎡
+                scratches are acceptable.Repair is allowed without affecting the
+                electrical performance.
+                <br />
+                <br />
+                If you need more strict requirements, we provide an option to
+                offer Superb appearance quality.
+              </span>
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio">
+                <label>IPC Class 2 Standard</label>
+              </div>
+            </div>
+          </section>
+          <!-- SIlk SCreeen tech -->
+          <section class="order-param-wrapper">
+            <div class="label-of-input">
+              Silk Screen <br />
+              Technology
+            </div>
+            <span class="tooltip">
+              <!-- <img src="./assets/svg/question_mark.svg" alt="tooltip" />
+              <span class="tooltiptext">
+                We electrically test PCBs by using a flying probe tester to
+                ensure there are no open circuits or no short circuits.
+              </span> -->
+            </span>
+
+            <div class="radio-wrapper">
+              <div class="active-radio">
+                <label>INK-jet / Screen Printing Silk-Screen</label>
+              </div>
+            </div>
+          </section>
+          <div class="contact-d radio-wrapper">
+            <div class="c-cvr">
+              <label for="email" class="heading-remark">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="cemail"
+                placeholder="mail@example.com"
+                class="input-jl"
+              />
+            </div>
+            <div class="c-cvr">
+              <label for="mobile" class="heading-remark">Mobile</label>
+              <input
+                type="text"
+                name="mobile"
+                id="cmobile"
+                placeholder="contact number"
+                class="input-jl"
+              />
+            </div>
+          </div>
+          <div class="heading-remark">
+            PCB Remarks <img src="assets/svg/pen.svg" alt="remark" />
+          </div>
+          <div class="radio-wrapper">
+            <textarea
+              name="remarks"
+              id="Remarks"
+              placeholder="Leave a remark if you have any request"
+              rows="3"
+              cols="50"
+            ></textarea>
+          </div>
+          <span
+            style="display: flex; justify-content: center; margin-top: 2rem"
+          >
+            <button class="RoundedButton" id="place-order">Place Order</button>
+          </span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="company-container">
+        <h3>COMPANY</h3>
+        <div>
+          <a
+            href="RefundPolicy.html"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <div class="footer-items">Cancellation & Refund Policy</div>
+          </a>
+          <a
+            href="Terms of Service.html"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <div class="footer-items">Terms of Service</div>
+          </a>
+          <a
+            href="Privacy Policy.html"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <div class="footer-items">Privacy Policy</div>
+          </a>
+
+          <a
+            href="Shipping and Delivery Policy.html"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <div class="footer-items">Shipping and Delivery Policy</div>
+          </a>
+        </div>
+      </div>
+      <div class="support-container">
+        <h3>SERVICES</h3>
+        <div>
+          <a href="pcb_design.html" style="text-decoration: none">
+            <div class="footer-items">PCB Design Quote</div>
+          </a>
+          <a href="stencil.html" style="text-decoration: none">
+            <div class="footer-items">PCB Stencil Quote</div>
+          </a>
+          <a href="Bom_Inquiry.html" style="text-decoration: none">
+            <div class="footer-items">E-Component Bom Tool</div>
+          </a>
+        </div>
+      </div>
+      <div class="support-container">
+        <h3>SUPPORT</h3>
+        <div>
+          <a href="about.html" style="text-decoration: none">
+            <div class="footer-items">About Us</div>
+          </a>
+          <a href="contact.html" style="text-decoration: none">
+            <div class="footer-items">Contact Us</div>
+          </a>
+          <a href="cert.html" style="text-decoration: none">
+            <div class="footer-items">Certifications</div>
+          </a>
+        </div>
+      </div>
+      <div class="network-site-container">
+        <div class="network-site-inner-container">
+          <h3>NETWORK SITE</h3>
+          <div>
+            <!-- <a
+              href="http://d17.in"
+              target="_blank"
+              style="text-decoration: none"
+            > -->
+            <div class="footer-items">Comming soon</div>
+            <!-- </a> -->
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: end">
+        <div class="connect-container">
+          <img src="assets/img/logoSlogan.png" width="250" />
+          <h3>CONNECT WITH US</h3>
+          <div>
+            <img src="assets/svg/facebook.svg" />
+            <img src="assets/svg/insta.svg" />
+            <img src="assets/svg/linkedIn.svg" />
+            <img src="assets/svg/youtube.svg" />
+            <img src="assets/svg/twiter.svg" />
+          </div>
+        </div>
+        <p class="footer-items">
+          © 2023 Microplacer.com All Rights Reserved. Privacy Policy Terms &
+          Conditions
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="javascript/index.js"></script>
+  <script src="javascript/order.js"></script>
+
+  <script>
+    function closePopup() {
+      const popup = document.getElementById("errorPopup");
+      popup.style.display = "none";
+    }
+  </script>
+</html>

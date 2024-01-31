@@ -1,0 +1,150 @@
+/* Common styles for tablet, desktop, and mobile */
+.Maxcontainer {
+  max-width: 1250px;
+  margin: auto;
+}
+header{
+  box-shadow: 0px 0px 5px 2px #ccc;
+}
+/* TopNavC */
+.TopNavC {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  padding: 1rem 0;
+  justify-content: space-between;
+
+}
+
+/* LeftSection */
+.LeftSection {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+/* RightSection */
+.RightSection {
+  display: flex;
+  align-items: center;
+}
+
+/* BNavbar */
+.BNavbar,
+.MNavbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #ffffff;
+}
+
+
+.MNavbar {
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+/* LogoCover */
+.LogoCover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navlogo */
+.Navlogo {
+  padding: 1rem;
+  height: 80px;
+}
+
+/* Hamburger */
+.Hamburger {
+  display: none;
+}
+
+/* NavItems */
+.NavItems {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.NavItems:hover {
+  color: #2b8ced;
+}
+
+/* Avtar */
+.Avtar {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  color: #252525;
+  cursor: pointer;
+}
+
+/* IconItem */
+.IconItem {
+  cursor: pointer;
+}
+
+.Nactive {
+  color: #2b8ced;
+}
+.TopNav{
+  border-bottom: 1px solid #ccc;
+}
+/* Responsive Styles for Tablet and Mobile */
+@media (max-width: 767px) {
+ .TopNavC{
+  font-size: small;
+ }
+  .BNavbar,
+  .MNavbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .LogoCover {
+      width: 100%;
+      padding: 1rem;
+      justify-content: space-between;
+  }
+
+  .MNavbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      justify-content: center;
+      min-width: 100%;
+  }
+
+  .Hamburger {
+      display: block;
+      margin-bottom: 1rem;
+      margin-right: 2.5rem;
+      transform: scale(2);
+  }
+
+  .NavItems {
+      font-size: large;
+      margin-bottom: 0.5rem;
+  }
+
+  .Avtar {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 2rem;
+      font-size: x-large;
+  }
+}
+
+.BNavbar {
+  justify-content: space-between;
+}

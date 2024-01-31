@@ -120,4 +120,60 @@ $(document).ready(function () {
   } else {
     animateLogos();
   }
+
+  $("#tab2").hide();
+
+  $("#tab1bt").click(function () {
+    openTab($("#tab1"), $("#tab2"), $("#tab1bt"), $("#tab2bt"));
+  });
+
+  $("#tab2bt").click(function () {
+    openTab($("#tab2"), $("#tab1"), $("#tab2bt"), $("#tab1bt"));
+  });
+
+  function openTab(activeTab, inactiveTab, activeBtn, inactiveBtn) {
+    console.log(`click ${activeTab.attr("id")}`);
+    inactiveBtn.removeClass("active");
+    activeBtn.addClass("active");
+    inactiveTab.hide();
+    activeTab.show();
+  }
+
+  const tables = [
+    $("#drill-hole-size"),
+    $("#min-clearance"),
+    $("#bga"),
+    $("#min-anual"),
+    $("#solder-mask"),
+    $("#legend"),
+    $("#board-outline"),
+    $("#panalization"),
+  ];
+
+  tables.forEach((element) => {
+    element.slideUp();
+    const img = element.attr("id") + "-img";
+    $(`#${img}`).toggleClass("rotator");
+  });
+
+  function toggleDataContainer(btnId, imgId, containerId) {
+    const button = $(`#${btnId}`);
+    const arrow = $(`#${imgId}`);
+    const container = $(`#${containerId}`);
+
+    container.slideToggle();
+    arrow.toggleClass("rotator");
+
+    // Close other containers and reset arrows except the current one
+    // $(`[id^='pcb-Specifications']`).not(container).slideUp();
+    // $(`[id^='arrow-img']`).not(arrow).removeClass("rotate");
+  }
+
+  // Click event for all buttons
+  $("[id$='-bt']").click(function () {
+    const btnId = $(this).attr("id");
+    const imgId = btnId.replace("-bt", "-img");
+    const containerId = btnId.replace("-bt", "");
+    toggleDataContainer(btnId, imgId, containerId);
+  });
 });

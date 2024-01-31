@@ -1,6 +1,16 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../font/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("./font/Helvetica.ttf");
+}
 * {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     Arial, sans-serif;
+
   font-size: 12px;
   color: #000;
   margin: 0;
@@ -34,12 +44,10 @@
   background-color: transparent;
 }
 
-/* //carousal÷ */
 .carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 46rem;
 }
 
 .slides {
@@ -50,10 +58,12 @@
 .slide {
   flex: 0 0 100%;
 }
+
 .slideimg {
-  height: 46rem;
+  width: 100%;
   object-fit: cover;
 }
+
 .active {
   opacity: 1;
 }
@@ -65,18 +75,19 @@
   z-index: 1;
 }
 
-.prev {
-  left: 2rem;
+.prev,
+.next {
   background: transparent;
   border: none;
   scale: 2;
 }
 
+.prev {
+  left: 2rem;
+}
+
 .next {
   right: 2rem;
-  background: transparent;
-  border: none;
-  scale: 2;
 }
 
 /* instanst qoute style  */
@@ -160,7 +171,10 @@
 .DimensionInput {
   width: 5rem;
   border: none;
-  padding: 0.5rem;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -254,6 +268,7 @@
 .news-item {
   display: block;
   color: red;
+  text-align: center;
   font-size: 14px;
   line-height: 1rem;
 }
@@ -270,14 +285,14 @@
 /* cards */
 .Cards {
   margin: auto;
-  max-width: 1250px;
+  max-width: 1500px;
   padding-bottom: 1rem;
 }
 
 .CardContainer {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 2rem;
 }
 
@@ -292,6 +307,7 @@
   width: 24rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
   border-radius: 5px;
+
   padding: 0.5rem;
   margin: 1rem;
 }
@@ -299,6 +315,7 @@
 @media (max-width: 768px) {
   .CardWrapper {
     width: 80%;
+    margin: 1rem auto;
   }
 }
 
@@ -311,6 +328,8 @@
 
 .CardContent {
   text-align: center;
+  line-height: normal;
+  
 }
 
 .CardImage {
@@ -329,7 +348,7 @@
   font-weight: 700;
   color: #2b8ced;
 }
-
+/*  */
 .FeaturesList {
   display: flex;
   justify-content: start;
@@ -376,8 +395,9 @@
 }
 
 .Heading {
-  font-size: 42px;
+  font-size: 2rem;
   font-weight: bold;
+  word-wrap: w;
   text-align: center;
 }
 
@@ -385,10 +405,6 @@
   opacity: 50%;
   font-size: medium;
   padding: 0.5rem;
-}
-
-.BackgroundImage {
-  /* Add styles for the background image */
 }
 
 .Video {
@@ -638,4 +654,222 @@ footer {
   align-items: end;
   grid: 0.1rem;
   gap: 1rem;
+}
+
+/* ShadowBox */
+.ShadowBox {
+  padding: 3rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px 2px rgba(198, 206, 221, 0.3);
+}
+
+/* RoundedButton */
+.RoundedButton {
+  min-width: 25rem;
+  font-size: medium;
+  padding: 1rem;
+  border-radius: 4rem;
+  margin: 0 2rem;
+  font-weight: 700;
+}
+
+.RoundedButton[varient="outline"] {
+  background: white;
+  border: 1px solid #2b8ced;
+  color: #2b8ced;
+}
+
+.RoundedButton:not([varient="outline"]) {
+  background: #2b8ced;
+  border: 1px solid #2b8ced;
+  color: white;
+}
+/* Default styles */
+
+/* Your existing CSS goes here */
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  /* Update styles for desktop here */
+
+  /* Example: Increase font size for larger screens */
+  * {
+    font-size: 16px;
+  }
+
+  .slides {
+    height: 60rem; /* Adjust as needed */
+  }
+  .VContainer {
+    height: 800px; /* Adjust as needed */
+  }
+
+  .Video {
+    height: 500px; /* Adjust as needed */
+  }
+
+  .ReplayButton,
+  .QuoteButton {
+    font-size: 18px; /* Adjust as needed */
+  }
+  footer {
+    padding: 2rem;
+  }
+
+  .company-container,
+  .support-container,
+  .network-site-container,
+  .connect-container {
+    padding: 1rem;
+  }
+
+  .footer-items {
+    font-size: medium;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Update styles for tablets here */
+
+  /* Example: Adjust font size for tablets */
+  .InstantQuote {
+    display: none;
+  }
+  * {
+    font-size: 14px;
+  }
+
+  .slideimg {
+    height: 30rem; /* Adjust as needed */
+  }
+  .slides {
+    height: 40rem; /* Adjust as needed */
+  }
+  .CardContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .VContainer {
+    height: 600px; /* Adjust as needed */
+  }
+
+  .Video {
+    height: 400px; /* Adjust as needed */
+  }
+
+  .ReplayButton,
+  .QuoteButton {
+    font-size: 16px; /* Adjust as needed */
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-container,
+  .support-container,
+  .network-site-container,
+  .connect-container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .footer-items {
+    font-size: 16px;
+  }
+
+  .connect-container {
+    align-items: center;
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+  /* Update styles for mobile here */
+
+  /* Example: Further reduce font size for smaller screens */
+  * {
+    font-size: 12px;
+  }
+  .connect-container {
+    align-self: center;
+  }
+  .cc-2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    height: 2rem;
+  }
+  .homedis {
+    padding: 2rem;
+    height: auto;
+  }
+  .DisContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .YoutubeVideo {
+    height: 18rem;
+  }
+  .bg-svg-v {
+    display: none;
+  }
+
+  .InstantQuote {
+    display: none;
+  }
+
+  .slideimg {
+    height: 20rem; /* Adjust as needed */
+  }
+  .VContainer {
+    height: 500px; /* Adjust as needed */
+  }
+
+  .Video {
+    height: auto;
+    width: 90%;
+    margin: auto; /* Adjust as needed */
+  }
+
+  .ReplayButton,
+  .QuoteButton {
+    font-size: 14px; /* Adjust as needed */
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-container,
+  .support-container,
+  .network-site-container,
+  .connect-container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .footer-items {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .connect-container {
+    align-items: center;
+  }
+}
+
+/* Common styles for all screen sizes */
+
+/* Your existing common styles go here */
+.table-cvr{
+  overflow-x: auto;
+}
+a{
+  text-decoration: none;
+}
+
+.c-cover{
+ padding: 2rem;
 }

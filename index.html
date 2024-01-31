@@ -2,7 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
     <meta name="theme-color" content="#000000" />
     <meta
       name="keywords"
@@ -17,19 +27,24 @@
       body {
         background: #ffffff;
       }
+      a {
+        text-decoration: none;
+      }
     </style>
-    <link rel="stylesheet" href="css/index.css" />
 
     <link rel="stylesheet" href="css/Navbar.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Microplacer India</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
+      
       <!-- Top Navigation -->
       <section class="TopNav">
         <div class="TopNavC">
           <!-- Left Section -->
+
           <div class="LeftSection">
             <svg
               class="Icon"
@@ -76,7 +91,7 @@
         <nav class="BNavbar">
           <!-- Logo Cover -->
           <div class="LogoCover">
-            <a href="/">
+            <a href="index.html">
               <img class="Navlogo" src="assets/img/logoSlogan.png" alt="Logo" />
             </a>
             <!-- Hamburger -->
@@ -116,70 +131,42 @@
 
           <!-- Mobile Navbar -->
           <div class="MNavbar">
-            <a href="/" class="textStyle">
-              <div class="NavItems">Home</div>
+            <a href="index.html" class="textStyle">
+              <div class="NavItems Nactive">Home</div>
             </a>
             <a href="capability.html" class="textStyle">
               <div class="NavItems">Capability</div>
             </a>
-            <a href="/" class="textStyle">
+            <a href="contact.html" class="textStyle">
+              <div class="NavItems">Contact Us</div>
+            </a>
+            <a href="order.html" class="textStyle">
               <div class="NavItems">Order Now</div>
             </a>
-            <a href="/" class="textStyle">
-              <div class="NavItems">new</div>
-            </a>
+
             <!-- Other links and elements here -->
           </div>
         </nav>
       </section>
     </header>
     <!-- caraousal start -->
-    <section>
-      <div class="carousel">
-        <div class="slides">
-          <div class="slide active">
-            <img class="slideimg" src="assets/img/slide3.jpg" alt="Slide 1" />
-          </div>
-          <div class="slide">
-            <img class="slideimg" src="assets/img/slide2.jpg" alt="Slide 2" />
-          </div>
-          <div class="slide">
-            <img class="slideimg" src="assets/img/slide4.jpg" alt="Slide 3" />
-          </div>
-          <!-- Add more slides as needed -->
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/slide3.jpg" class="d-block w-100" alt="slide1" />
         </div>
-        <button class="cbutton prev">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-chevron-compact-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"
-            />
-          </svg>
-        </button>
-        <button class="cbutton next">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-chevron-compact-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"
-            />
-          </svg>
-        </button>
+        <div class="carousel-item">
+          <img src="assets/img/slide2.jpg" class="d-block w-100" alt="slide2" />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/slide4.jpg" class="d-block w-100" alt="slide3" />
+        </div>
       </div>
-    </section>
+    </div>
     <!-- caraousal end -->
     <!-- instant qoute block start -->
     <main class="InstantQuote">
@@ -572,8 +559,8 @@
           order tracking
         </h5>
         <img
+          class="bg-svg-v"
           src="./assets/img/videocvr.png"
-          class="BackgroundImage"
           alt="background"
           style="
             position: absolute;
@@ -583,8 +570,8 @@
           "
         />
         <img
+          class="bg-svg-v"
           src="./assets/img/videocvr.png"
-          class="BackgroundImage"
           alt="background"
           style="
             position: absolute;
@@ -620,7 +607,7 @@
       <div class="DisContainer">
         <div>
           <div>
-            <div class="CardContainer">
+            <div class="CardContainer cc-2">
               <img src="assets/svg/like.svg" alt="logo" class="Logo" />
               <h3 class="DTitle">Excellent Quality PCBs</h3>
             </div>
@@ -631,7 +618,7 @@
             </p>
           </div>
           <div>
-            <div class="CardContainer">
+            <div class="CardContainer cc-2">
               <img src="assets/svg/instantQoute.svg" alt="logo" class="Logo" />
               <h3 class="DTitle">Fast & Stable Delivery</h3>
             </div>
@@ -642,7 +629,7 @@
             </p>
           </div>
           <div>
-            <div class="CardContainer">
+            <div class="CardContainer cc-2">
               <img src="assets/svg/support.svg" alt="logo" class="Logo" />
               <h2 class="DTitle">24 Hour Support</h2>
             </div>
@@ -654,10 +641,11 @@
           </div>
         </div>
         <iframe
+          src="https://www.youtube.com/embed/yZt0GKBj0qM?rel=0"
           class="YoutubeVideo"
-          src="https://www.youtube.com/embed/OS37AZ4POBg"
-          frameborder="0"
           allowfullscreen
+          scrolling="no"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
         ></iframe>
       </div>
     </section>
@@ -674,6 +662,7 @@
           <div class="LogosWrapper">
             <img src="assets/svg/aliies/1.png" alt="allies" class="LogoImage" />
             <img src="assets/svg/aliies/2.png" alt="allies" class="LogoImage" />
+            <img src="assets/img/tesla.png" alt="allies" class="LogoImage" />
             <img src="assets/svg/aliies/3.jpg" alt="allies" class="LogoImage" />
             <img src="assets/svg/aliies/4.png" alt="allies" class="LogoImage" />
             <img src="assets/svg/aliies/6.png" alt="allies" class="LogoImage" />
@@ -721,21 +710,21 @@
         <h3>COMPANY</h3>
         <div>
           <a
-            href="/RefundPolicy.html"
+            href="RefundPolicy.html"
             target="_blank"
             style="text-decoration: none"
           >
             <div class="footer-items">Cancellation & Refund Policy</div>
           </a>
           <a
-            href="/TermsOfService.html"
+            href="Terms of Service.html"
             target="_blank"
             style="text-decoration: none"
           >
             <div class="footer-items">Terms of Service</div>
           </a>
           <a
-            href="https://www.microplacer.com/PrivacyPolicy.html"
+            href="Privacy Policy.html"
             target="_blank"
             style="text-decoration: none"
           >
@@ -743,7 +732,7 @@
           </a>
 
           <a
-            href="https://www.microplacer.com/shipment.html"
+            href="Shipping and Delivery Policy.html"
             target="_blank"
             style="text-decoration: none"
           >
@@ -754,13 +743,13 @@
       <div class="support-container">
         <h3>SERVICES</h3>
         <div>
-          <a to="pcb-design-tool" style="text-decoration: none">
+          <a href="pcb_design.html" style="text-decoration: none">
             <div class="footer-items">PCB Design Quote</div>
           </a>
-          <a to="stencilin" style="text-decoration: none">
+          <a href="stencil.html" style="text-decoration: none">
             <div class="footer-items">PCB Stencil Quote</div>
           </a>
-          <a to="bom-tool" style="text-decoration: none">
+          <a href="Bom_Inquiry.html" style="text-decoration: none">
             <div class="footer-items">E-Component Bom Tool</div>
           </a>
         </div>
@@ -768,13 +757,13 @@
       <div class="support-container">
         <h3>SUPPORT</h3>
         <div>
-          <a to="about" style="text-decoration: none">
+          <a href="about.html" style="text-decoration: none">
             <div class="footer-items">About Us</div>
           </a>
-          <a to="contact" style="text-decoration: none">
+          <a href="contact.html" style="text-decoration: none">
             <div class="footer-items">Contact Us</div>
           </a>
-          <a to="certifications" style="text-decoration: none">
+          <a href="cert.html" style="text-decoration: none">
             <div class="footer-items">Certifications</div>
           </a>
         </div>
@@ -783,13 +772,13 @@
         <div class="network-site-inner-container">
           <h3>NETWORK SITE</h3>
           <div>
-            <a
+            <!-- <a
               href="http://d17.in"
               target="_blank"
               style="text-decoration: none"
-            >
-              <div class="footer-items">MQTT Testing</div>
-            </a>
+            > -->
+            <div class="footer-items">Comming soon</div>
+            <!-- </a> -->
           </div>
         </div>
       </div>
@@ -812,5 +801,15 @@
       </div>
     </footer>
   </body>
+  <script>
+    function handleRedirect(page) {
+      console.log(page);
+    }
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
   <script src="javascript/index.js"></script>
 </html>
